@@ -15,8 +15,27 @@ int sumOfThreeOrFiveDivisor(int num) { //task1
 	return sum;
 }
 
+int sumOfEvenFibonacciNums(int lastNum) { //task2
+
+	int sum = 0;
+	int temp = 1;
+	int i = 1;
+	while (i < lastNum)
+	{
+		int temp2 = i;
+		i += temp;
+		temp = temp2;
+		if (i % 2 == 0) {
+			sum += i;
+		}
+	}
+	return sum;
+}
+
+
 int main()
 {
 
-	std::cout << sumOfThreeOrFiveDivisor(1000);
+	std::cout << sumOfThreeOrFiveDivisor(1000)<<std::endl;
+	std::cout << sumOfEvenFibonacciNums(4000000);
 }
