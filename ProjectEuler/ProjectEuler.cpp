@@ -55,12 +55,42 @@ long largestPrimeFactor(long long num) {
 	return maxFactor;
 }
 
+bool isPalindrom(int num) { // task 4
+
+	if (num > 10000 && num < 100000) { // 12345
+		if (num % 10 == num / 10000 && (num / 10) % 10 == (num / 1000) % 10)
+			return true;
+	}
+	else // 123456
+	{
+		if (num % 10 == num / 100000 && (num / 10) % 10 == (num / 10000) % 10 && (num / 100) % 10 == (num / 1000) % 10)
+			return true;
+	}
+	return false;
+}
+
+int largestPalindrom() {
+
+	int largestPalindrom = 0;
+	for (int i = 100; i < 1000; i++)
+	{
+		for (int j = 100; j < 1000; j++)
+		{
+			if (isPalindrom(i * j) && largestPalindrom < i*j)
+
+				largestPalindrom = i * j;
+		}
+	}
+	return largestPalindrom;
+
+}
+
 
 int main()
 {
 
-	std::cout << sumOfThreeOrFiveDivisor(1000)<<std::endl;
-	std::cout << sumOfEvenFibonacciNums(4000000)<<std::endl;
-	std::cout << largestPrimeFactor(600851475143);
-
+	//std::cout << sumOfThreeOrFiveDivisor(1000)<<std::endl;
+	//std::cout << sumOfEvenFibonacciNums(4000000)<<std::endl;
+	//std::cout << largestPrimeFactor(600851475143);
+	std::cout << largestPalindrom();
 }
