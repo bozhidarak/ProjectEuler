@@ -86,11 +86,37 @@ int largestPalindrom() {
 }
 
 
+long long evenlyDevisible(int num) { // task 5 NOT COMPLETE
+	long long res = 6;
+
+	for (int i = 4; i < num + 1; i++)
+	{
+		if (isPrime(i)) {
+			res *= i;
+		}
+		else {
+			int temp = i;
+			for (int j = 2; j < i; j++)
+			{
+				if (temp % j == 0)
+				{
+					temp /= j;
+					
+				}
+			}
+			res *= temp;
+		}
+	}
+	return res;
+}
+
+
 int main()
 {
 
 	//std::cout << sumOfThreeOrFiveDivisor(1000)<<std::endl;
 	//std::cout << sumOfEvenFibonacciNums(4000000)<<std::endl;
 	//std::cout << largestPrimeFactor(600851475143);
-	std::cout << largestPalindrom();
+	//std::cout << largestPalindrom()<<std::endl;
+	std::cout << evenlyDevisible(10);
 }
