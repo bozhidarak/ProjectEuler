@@ -110,6 +110,28 @@ long long evenlyDevisible(int num) { // task 5 NOT COMPLETE
 	return res;
 }
 
+int squaresSum(int num) { //task 6
+	int sum = 0;
+	for (int i = 1; i < num + 1; i++)
+	{
+		sum += i * i;
+	}
+	return sum;
+}
+
+int sumOfSquares(int num) {
+	int sum = 0;
+	for (int i = 1; i < num + 1; i++)
+	{
+		sum += i;
+	}
+	return (sum * sum);
+}
+
+int differenceInSums(int sum1, int sum2) {
+	return abs(sum1 - sum2);
+}
+
 
 int main()
 {
@@ -118,5 +140,8 @@ int main()
 	//std::cout << sumOfEvenFibonacciNums(4000000)<<std::endl;
 	//std::cout << largestPrimeFactor(600851475143);
 	//std::cout << largestPalindrom()<<std::endl;
-	std::cout << evenlyDevisible(10);
+	//std::cout << evenlyDevisible(10)<<std::endl;
+	std::cout << squaresSum(100)<<std::endl;
+	std::cout << sumOfSquares(100) << std::endl;
+	std::cout << differenceInSums(squaresSum(100), sumOfSquares(100))<<std::endl;
 }
