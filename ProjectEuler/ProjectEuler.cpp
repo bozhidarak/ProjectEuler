@@ -133,15 +133,29 @@ int differenceInSums(int sum1, int sum2) {
 }
 
 
+int primeNumber(int num) { //task7
+	int tempPrime = 5;
+	int i = 5;
+	while (num -2 > 0) {
+		if (isPrime(i)) {
+			tempPrime = i;
+			i++;
+			num--;
+		}
+		else
+			i++;
+	}
+	return tempPrime;
+}
+
 int main()
 {
 
-	//std::cout << sumOfThreeOrFiveDivisor(1000)<<std::endl;
-	//std::cout << sumOfEvenFibonacciNums(4000000)<<std::endl;
-	//std::cout << largestPrimeFactor(600851475143);
-	//std::cout << largestPalindrom()<<std::endl;
-	//std::cout << evenlyDevisible(10)<<std::endl;
-	std::cout << squaresSum(100)<<std::endl;
-	std::cout << sumOfSquares(100) << std::endl;
-	std::cout << differenceInSums(squaresSum(100), sumOfSquares(100))<<std::endl;
+	//std::cout << sumOfThreeOrFiveDivisor(1000)<<std::endl;       //task 1
+	//std::cout << sumOfEvenFibonacciNums(4000000)<<std::endl;     //task 2
+	//std::cout << largestPrimeFactor(600851475143);               //task 3
+	//std::cout << largestPalindrom()<<std::endl;                  //task 4
+	//std::cout << evenlyDevisible(10)<<std::endl;                 //task 5 NOT COMPLETE
+	//std::cout << differenceInSums(squaresSum(100), sumOfSquares(100))<<std::endl; //task 6
+	std::cout << primeNumber(10001);
 }
