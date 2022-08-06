@@ -18,5 +18,13 @@
     <ClCompile Include="ProjectEuler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EulerFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EulerFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
